@@ -1,0 +1,32 @@
+{
+  "name": "dsh-agent-reach",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness profile bundle: Agent Reach skill — gives agents one-command internet reach (web, YouTube, GitHub, Twitter/X, Reddit, RSS, Exa search, Bilibili, Xiaohongshu and more) via the Agent Reach CLI",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "skill",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "agent-reach",
+    "skill",
+    "web",
+    "search"
+  ]
+}

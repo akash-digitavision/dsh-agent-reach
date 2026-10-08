@@ -1,0 +1,11 @@
+# dsh-agent-reach profile bundle patch: registers the Agent Reach skill via this
+# bundle's own Cordis module (index.js), which calls ctx.skills.register() with the
+# skill body from skill/agent-reach.md. Agent Reach itself is a CLI capability
+# layer — NOT an MCP server — so there is no mcp-client row here; the skill teaches
+# the agent to install the CLI on first use.
+# NOTE: new rows must use `- insert:` — a top-level id entry is an override of an
+# existing row and is silently ignored if that row does not exist.
+- insert:
+    - id: agent-reach-skill
+      name: 'dsh-agent-reach'
+      config: {}
